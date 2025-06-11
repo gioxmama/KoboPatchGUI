@@ -19,4 +19,4 @@ RUN pip install --no-cache-dir -r requirements.txt || true
 
 ENV DISPLAY=:0
 
-CMD ["python", "main.py"]
+CMD ["python", "KoboPatchGUI-Qt.py"]
