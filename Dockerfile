@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 
-# Install Tkinter and necessary dependencies
+# Install Tkinter and required libraries
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         python3-tk \
@@ -10,10 +10,10 @@ RUN apt-get update && \
 
 WORKDIR /app
 
+# Copy the Python app into the image (all .py files etc.)
 COPY . .
-
-# No PyQt5 needed, so no pip install here
 
 ENV DISPLAY=:0
 
+# The program will look for .patch files inside /patches
 CMD ["python", "KoboPatchGUI-Tk.py"]
