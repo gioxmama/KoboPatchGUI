@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   kobopatchgui-tk:
-    image: ghcr.io/gioxmama/kobopatchgui-tk:latest
+    image: ghcr.io/gioxmama/kobopatchgui:latest
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
